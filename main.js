@@ -8,7 +8,7 @@ function bienvenido() {
     let a = "si";
 
     while (a === "si") {
-        let pedido = prompt("Indícanos el número del menú para seleccionar tu pedido");
+        let pedido = prompt("Indícanos que pido de empandas queres compra");
         let cantidad = prompt("¿Qué cantidad de empanadas?");
         
         // Acumular el pedido en el objeto
@@ -27,13 +27,12 @@ function bienvenido() {
         let precioUnitario = 1000; // Precio por empanada
         let subtotal = acumulado[tipo] * precioUnitario;
         total += subtotal;
-
+        
+    
         alert(`Pedido acumulado:\n${acumulado[tipo]} empanadas de tipo ${tipo}. Subtotal: $${subtotal}`);
     }
-
-    alert(`Gracias ${cliente} por tu compra. Tu pedido total es de ${total} empanadas
-        \n El total suma $${total} 
-        \n Por pago en efectivo, tienes un 10% de descuento, quedando en $${total * 0.9}`);
-}
+    
+    alert(`Gracias ${cliente} por tu compra. Tu pedido suma total es de $${total}\n\n Por pago en efectivo, tienes un 10% de descuento, quedando en $${total * 0.9}`);
+    }
 
 bienvenido();
